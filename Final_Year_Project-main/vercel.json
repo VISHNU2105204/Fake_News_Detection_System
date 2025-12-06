@@ -1,0 +1,28 @@
+{
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No installation needed'",
+  "env": {},
+  "functions": {
+    "api/analyze.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
