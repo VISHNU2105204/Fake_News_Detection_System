@@ -2,7 +2,6 @@
   "buildCommand": "echo 'Static site'",
   "outputDirectory": ".",
   "installCommand": "echo 'No installation needed'",
-  "env": {},
   "functions": {
     "api/analyze.py": {
       "runtime": "python3.11"
